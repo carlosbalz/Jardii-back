@@ -1,0 +1,25 @@
+@JardiiApp_HostAddress = http://localhost:5208
+
+GET {{JardiiApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+Post {{JardiiApp_HostAddress}}/order
+Content-Type: application/json
+
+{
+  "number": 1,
+  "CustomerName": "Carlos",
+  "PaymentMethod": "Pix",
+  "Address": "Avenida Dom Vidal, 433. Bairro São Francisco",
+  "Items": [
+    {
+      "Name": "La Bocha",
+      "Value": 32.50,
+      "Description": "Teste"
+    }
+  ]
+}
+
+###
